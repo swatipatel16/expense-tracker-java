@@ -3,7 +3,7 @@ package com.expense.expense_tracker.controller;
 import com.expense.expense_tracker.model.Expense;
 import com.expense.expense_tracker.service.ExpenseService;
 import jakarta.validation.Valid;
-import org.springframework.http.ResponseEntity; // Added missing import
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -29,15 +29,16 @@ public class ExpenseController {
     }
 
     @PutMapping("/{id}")
-public ResponseEntity<Expense> updateExpense(@PathVariable Long id, @RequestBody Expense updatedExpense) {
-    
-    Expense result = service.update(id, updatedExpense);
-    return ResponseEntity.ok(result);
-}
+    public ResponseEntity<Expense> updateExpense(@PathVariable Long id, @RequestBody Expense updatedExpense) {
+        Expense result = service.update(id, updatedExpense);
+        return ResponseEntity.ok(result);
+    }
 
     @DeleteMapping("/{id}")
     public String delete(@PathVariable Long id) {
         service.delete(id);
         return "Deleted Successfully";
     }
+    
+    
 }
