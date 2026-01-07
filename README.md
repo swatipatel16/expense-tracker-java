@@ -45,8 +45,9 @@ src/main/java/com/expense/expense_tracker/
 
 # 🛣️ API Documentation
 
-# Method       Endpoint                    Description
-   GET       /api/expenses         Fetch all expenses in JSON format
-   POST      /api/expenses         Add a new expense 
-   PUT       /api/expenses/{id}    Update an existing expense by ID
-   DELETE    /api/expenses/{id}    Remove an expense from the record
+| Method | Endpoint | Description |
+
+| `GET` | `/api/expenses` | Fetch all expenses in JSON format |
+| `POST` | `/api/expenses` | Add a new expense |
+| `PUT` | `/api/expenses/{id}` | Update an existing expense by ID |
+| `DELETE` | `/api/expenses/{id}` | Remove an expense from the record |
